@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #212121; /* Dark background */
+  margin: 0;
+}
+
+.calculator {
+  border-radius: 20px; /* Rounded corners */
+  background-color: #303030; /* Slightly lighter than body */
+  padding: 20px;
+  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.3); /* Deeper shadow for depth */
+}
+
+.calculator-screen {
+  width: 100%;
+  height: 60px;
+  border: none;
+  background-color: #121212; /* Very dark background for the screen */
+  color: #e0e0e0; /* Light text for contrast */
+  font-size: 2.5rem; /* Larger font size */
+  text-align: right;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 10px; /* Rounded corners */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.calculator-screen:focus {
+  outline: none; /* Remove outline on focus */
+}
+
+.calculator-keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Four columns */
+  gap: 15px; /* Increased gap between buttons */
+}
+
+button {
+  height: 70px; /* Taller buttons */
+  font-size: 1.8rem; /* Larger font size */
+  border-radius: 10px; /* Rounded corners */
+  border: none;
+  background-color: #424242; /* Dim light gray for default buttons */
+  color: #ffffff; /* White text for contrast */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transition for hover and press */
+}
+
+button.operator {
+  background-color: #7c4dff; /* Light purple for operators */
+  color: white;
+}
+
+button.equal-sign {
+  background-color: #66bb6a; /* Light green for equal sign */
+  color: white;
+  grid-column: span 4; /* Equal button spans all columns */
+}
+
+button.all-clear {
+  background-color: #e57373; /* Light red for clear button */
+  color: white;
+}
+
+button:hover {
+  background-color: #555; /* Darker gray on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+button:active {
+  background-color: #333; /* Darker gray when pressed */
+  transform: scale(0.95); /* Slightly shrink on press */
+}
