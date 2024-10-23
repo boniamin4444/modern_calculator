@@ -55,7 +55,7 @@ function handleOperator(nextOperator) {
 
   calculator.waitingForSecondOperand = true;
   calculator.operator = nextOperator;
-  calculator.equation = equation + nextOperator; // Add the operator to the equation string
+  calculator.equation = equation + nextOperator; // Add the operatorss to the equation string
 }
 
 function handleEqualSign() {
